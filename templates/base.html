@@ -1,0 +1,12 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{% block t %}UDRe, Union des Démocrates Rénovés{% endblock %}</title>
+<meta name="description" content="UDRe : Tous pour la République, la République pour tous. Cohésion, Justice, Travail, Rénovation.">
+<link rel="icon" href="{{ url_for('static', filename='logo.jpg') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"></head><body>
+<header><a class="brand" href="/"><img src="{{ url_for('static', filename='logo.jpg') }}" alt="Logo UDRe" width="48" height="48"><span>UDRe<small>Union des Démocrates Rénovés</small></span></a>
+<nav><a href="/a-propos">Qui sommes-nous</a><a href="/organisation">Organisation</a><a href="/#contact">Contact</a><a class="btn" href="/adhesion">Adhérer</a></nav></header>
+<main>{% block c %}{% endblock %}</main>
+<footer id="contact"><div class="wave"></div><div class="in"><strong>UDRe, Union des Démocrates Rénovés</strong>
+<p>N°5 avenue du Rail, Q/ Basoko, C/ Ngaliema, Kinshasa<br>Référence : Supermarché SK ou UTEXAFRICA<br>Téléphone : <a href="tel:+243823740122">0823740122</a></p>
+<p>Cohésion, Justice, Travail, Rénovation.</p></div></footer></body></html>

@@ -1,0 +1,9 @@
+{% extends "base.html" %}{% block c %}
+<section class="hero"><div class="in hero-g"><div><h1>Tous pour la République, la République pour tous</h1>
+<p>Une famille de patriotes au service du bien-être et du développement de la nation congolaise.</p>
+<a class="btn big" href="/adhesion">Adhérer au parti, 10 $</a> <a class="lien" href="/a-propos">Découvrir notre vision</a></div>
+<figure><img src="{{ url_for('static', filename='president.jpg') }}" alt="Dominique Mwambay Mudinika" width="420" height="420"><figcaption>Dominique Mwambay Mudinika<br>Président National</figcaption></figure></div><div class="wave"></div></section>
+<section class="in"><h2>Notre devise</h2><div class="devise"><b>Cohésion</b><b>Justice</b><b>Travail</b><b>Rénovation</b></div>
+<p class="lead">Social-démocratie dans la Rénovation : libérer le peuple congolais des oppressions, rétablir la paix et la liberté, restaurer une justice équitable et bâtir une économie sociale attentive au bien-être des ménages.</p></section>
+<section class="in slogan"><p>Pas une province, un territoire, un secteur, une commune, un quartier ou une maison sans UDRe.</p></section>
+{% endblock %}

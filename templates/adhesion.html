@@ -1,0 +1,18 @@
+{% extends "base.html" %}{% block t %}Adhérer, UDRe{% endblock %}{% block c %}
+<section class="in narrow"><h1>Adhérer à l'UDRe</h1>
+<p class="lead">Remplissez ce formulaire. La carte de membre coûte {{ prix }} $ et s'active après validation de votre paiement.</p>
+{% if err %}<p class="err" role="alert">{{ err }}</p>{% endif %}
+<form method="post"><input type="hidden" name="t" value="{{ csrf() }}">
+<label>Nom *<input name="nom" required maxlength="100" autocomplete="family-name"></label>
+<label>Postnom<input name="postnom" maxlength="100"></label>
+<label>Prénom *<input name="prenom" required maxlength="100" autocomplete="given-name"></label>
+<label>Date de naissance *<input type="date" name="naissance" required></label>
+<label>Province *<input name="province" required maxlength="100"></label>
+<label>Commune ou territoire<input name="commune" maxlength="100"></label>
+<label>Quartier ou localité<input name="quartier" maxlength="100"></label>
+<label>Téléphone *<input type="tel" name="telephone" required maxlength="20" autocomplete="tel"></label>
+<label>Email<input type="email" name="email" maxlength="100" autocomplete="email"></label>
+<label class="ck"><input type="checkbox" name="nationalite"> Je suis de nationalité congolaise et j'ai 18 ans révolus.</label>
+<label class="ck"><input type="checkbox" name="statuts"> J'adhère aux statuts du parti.</label>
+<button class="btn big">Envoyer ma demande</button></form></section>
+{% endblock %}

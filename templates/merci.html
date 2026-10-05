@@ -1,0 +1,7 @@
+{% extends "base.html" %}{% block c %}
+<section class="in narrow"><h1>Demande enregistrée</h1>
+<p class="lead">Pour activer votre carte, payez {{ prix }} $ par Mobile Money au numéro <b>{{ num }}</b>.</p>
+<p>Indiquez ce code dans le motif du transfert :</p><p class="ref">{{ ref }}</p>
+<p>Notez-le ou faites une capture d'écran. Votre carte sera activée dès que le parti aura vérifié votre paiement.</p>
+<a class="btn" href="/">Retour à l'accueil</a></section>
+{% endblock %}

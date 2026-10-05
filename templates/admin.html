@@ -1,0 +1,7 @@
+{% extends "base.html" %}{% block c %}
+<section class="in"><h1>Adhésions ({{ rows|length }})</h1><p><a class="btn" href="/admin/export">Exporter en CSV</a> <a class="lien" href="/admin/sortir">Se déconnecter</a></p>
+<div class="tw"><table><tr><th>Code</th><th>Nom</th><th>Téléphone</th><th>Province</th><th>Statut</th><th></th></tr>
+{% for r in rows %}<tr><td>{{ r.ref }}</td><td>{{ r.nom }} {{ r.postnom }} {{ r.prenom }}</td><td>{{ r.telephone }}</td><td>{{ r.province }}</td><td>{{ r.statut }}</td>
+<td>{% if r.statut != 'actif' %}<form method="post" action="/admin/valider/{{ r.id }}"><input type="hidden" name="t" value="{{ csrf() }}"><button class="btn sm">Paiement reçu</button></form>{% endif %}</td></tr>
+{% else %}<tr><td colspan="6">Aucune adhésion pour le moment.</td></tr>{% endfor %}</table></div></section>
+{% endblock %}

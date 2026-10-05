@@ -1,0 +1,4 @@
+{% extends "base.html" %}{% block c %}
+<section class="in narrow"><h1>Espace admin</h1><form method="post"><input type="hidden" name="t" value="{{ csrf() }}">
+<label>Mot de passe<input type="password" name="mdp" required autocomplete="current-password"></label><button class="btn big">Se connecter</button></form></section>
+{% endblock %}

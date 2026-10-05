@@ -1,0 +1,9 @@
+{% extends "base.html" %}{% block t %}Organisation, UDRe{% endblock %}{% block c %}
+<section class="in"><h1>Organisation</h1><p class="lead">Les responsables nationaux et locaux de l'UDRe.</p>
+<div class="cards">
+<article><img src="{{ url_for('static', filename='president.jpg') }}" alt="" loading="lazy"><h3>Dominique Mwambay Mudinika</h3><p>Président National</p></article>
+<article><img src="{{ url_for('static', filename='sg.jpg') }}" alt="" loading="lazy"><h3>Hyppolite Kihondo Masangu</h3><p>Secrétaire Général</p></article>
+<article><img src="{{ url_for('static', filename='femmes.jpg') }}" alt="" loading="lazy"><h3>Julia Kamuanya Kadima</h3><p>Présidente de la Ligue nationale des femmes</p></article>
+<article><img src="{{ url_for('static', filename='jeunes.jpg') }}" alt="" loading="lazy"><h3>Yves Mbayo Kumayila</h3><p>Président de la Ligue nationale des jeunes</p></article></div>
+<h2>Responsables des districts</h2><div class="cards"><article><div class="av">VM</div><h3>Vially Masamuna</h3><p>Coordonnateur de la Ligue des jeunes, district de la Funa</p></article></div></section>
+{% endblock %}
